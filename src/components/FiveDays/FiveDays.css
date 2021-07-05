@@ -1,0 +1,23 @@
+.FiveDays {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 12% 0 22% 0;
+}
+@media (max-width: 1095px) {
+  .FiveDays {
+    width: 80%;
+  }
+}
+@media (max-height: 754px) {
+  .FiveDays {
+    width: 70%;
+  }
+}
+@media (max-width: 865px) {
+  .FiveDays {
+    width: 100%;
+  }
+}

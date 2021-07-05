@@ -1,0 +1,16 @@
+.Day {
+  border: 1px solid #c6c9cf;
+  padding: 25px 10px;
+  border-radius: 50px;
+  font-size: 25px;
+  font-family: Tahoma, sans-serif;
+  background-color: rgba(255, 255, 255, 0.1);
+  min-width: 120px;
+  color: #c6c9cf;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.Next-Days,
+span {
+  font-size: 15px;
+}

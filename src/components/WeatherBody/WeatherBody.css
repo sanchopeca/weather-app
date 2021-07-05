@@ -1,0 +1,34 @@
+.Weather-Wrapper {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 80px);
+  justify-content: space-around;
+  align-items: center;
+  color: #c6c9cf;
+  width: 70%;
+  padding: 5% 0 10%;
+}
+.Date,
+.Current-Day {
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Tahoma, sans-serif;
+}
+@media (max-width: 580px) {
+  .Date,
+  .Current-Day {
+    order: 1;
+  }
+}
+@media (max-height: 580px) {
+  .Date,
+  .Current-Day {
+    font-size: 1em;
+  }
+}
+@media (max-height: 476px) {
+  .Date,
+  .Current-day {
+    display: none;
+  }
+}

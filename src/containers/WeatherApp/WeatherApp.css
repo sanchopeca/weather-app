@@ -1,0 +1,60 @@
+.Wrapper {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  min-height: 100vh;
+  color: white;
+  transition: background-image 2s ease-out;
+  padding: 0 20px;
+}
+.Wrapper.Default {
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+.Wrapper.Clouds {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/clouds-bg.jpg");
+}
+.Wrapper.Snow {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/snow-bg.jpg");
+}
+.Wrapper.Clear {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/clear-bg.jpg");
+}
+.Wrapper.Rain {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/images/rain-bg.jpg");
+}
+
+.Weather-Stats-Wrapper {
+  display: flex;
+  width: 60%;
+}
+
+.Search {
+  width: 65%;
+}
+
+@media (max-width: 1095px) {
+  .Weather-Stats-Wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .Search {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .Weather-Stats-Wrapper {
+    width: 95%;
+  }
+}
