@@ -2,7 +2,6 @@ import React, {useState, useEffect, useCallback} from 'react';
 import './WeatherApp.css';
 import WeatherBody from '../../components/WeatherBody/WeatherBody';
 import Spinner from '../../components/UI/Spinner/Spinner';
-import { Box } from '@material-ui/core';
 import SearchBar from 'material-ui-search-bar';
 import FiveDays from '../../components/FiveDays/FiveDays';
 
@@ -37,16 +36,15 @@ const WeatherApp = () => {
 
     let updatedDays = [];
 
-    if (nextDays.length < 4) {
+    if (nextDays.length <= 5) {
       nextDays.push(days)
-      updatedDays = nextDays.flat()
     }
     
-    updatedDays = nextDays.slice(1,6);
+    updatedDays = nextDays.slice(1,6).flat();
     updatedDays.splice(0, 1, 'Tomorrow')
 
-
     setNextFiveDays(updatedDays);
+
     setCurrentDate({
       date: `${date} ${months[month - 1]} ${year}`,
       day: days[todayIndex]
@@ -96,7 +94,7 @@ const WeatherApp = () => {
       })
       .catch(err => {
         setFiveDaysData([]);
-        console.log(err)});
+        console.log()});
     }
   }, [weatherData])
 
